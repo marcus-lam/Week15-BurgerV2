@@ -1,0 +1,71 @@
+body {
+	font-family: 'Playfair Display', serif;
+	background: url("/assets/img/food.png");
+}
+
+.center {
+	text-align: center;
+}
+
+#title {
+	margin-top: 15px;
+	font-size: 42px;
+	font-weight: bold;
+}
+
+.headings {
+	font-size: 20px;
+	padding: 24px 0 10px 0;
+}
+
+#left-col {
+	float: left;
+	width: 33.3%;
+}
+
+#middle-col {
+	float: left;
+	width: 33.3%;
+}
+
+#right-col {
+	float: right;
+	width: 33.3%;
+}
+
+hr {
+	border-color: #dd4814;
+}
+
+#bGIF {
+	width: 100%;
+	margin: 15px 0;
+}
+
+#right-col li {
+	opacity: 0.69;
+}
+
+li {
+	margin: 10px;
+	padding: 7px;
+	background: orange;
+}
+
+button {
+	margin-top: 3px;
+	color: white;
+	border-color: red;
+	background: black;
+	font-family: 'Playfair Display', serif;
+}
+
+#insert-form {
+	background: #dd4814;
+	margin: 10px;
+	padding: 7px;
+}
+
+.form-group {
+	margin-bottom: 4px;
+}

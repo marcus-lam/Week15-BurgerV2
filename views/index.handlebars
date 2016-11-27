@@ -1,0 +1,53 @@
+<div id="left-col" class="center">
+  <h2 class="headings">NON-DEVOURED BURGERS:</h2>
+  <ul>
+    {{#each burgers}}
+      {{#unless this.devoured}}
+        <li>
+
+          {{this.burger_name}}
+
+          <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+            <input type="hidden" name="devoured" value="1">
+            <button type="submit">DEVOUR IT!</button>
+          </form>
+
+        </li>
+      {{/unless}}
+    {{/each}}
+  </ul>
+</div>
+
+<div id="middle-col" class="center">
+  <h1 id="title">BurgerDB</h1>
+  <hr>
+  <img id="bGIF" src="/assets/img/bouncyb.gif" alt="Bouncy Burger">
+  <h2 class="headings">ADD A BURGER:</h2>
+  <form id="insert-form" action="burgers/insert" method="POST">
+    <div class="form-group">
+      <label for="burger">Burger's Name:</label>
+      <input type="text" id="burger" name="name" pattern="\S(.*\S)?" required>
+    </div>
+    <button type="submit">ADD!</button>
+  </form>
+</div>
+
+<div id="right-col" class="center">
+  <h2 class="headings">DEVOURED BURGERS:</h2>
+  <ul>
+    {{#each burgers}}
+      {{#if this.devoured}}
+        <li>
+
+          {{this.burger_name}}
+
+          <form action="burgers/update/{{this.id}}?_method=PUT" method="POST">
+            <input type="hidden" name="devoured" value="0">
+            <button type="submit">ORDER ONE MORE!</button>
+          </form>
+
+        </li>
+      {{/if}}
+    {{/each}}
+  </ul>
+</div>
